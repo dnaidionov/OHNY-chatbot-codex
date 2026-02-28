@@ -1,0 +1,7 @@
+openapi: 3.1.0
+info:
+  title: OHNY Agentic Chatbot API
+  version: 0.0.1
+  description: Placeholder API contract for planning, retrieval, and check-in services.
+paths: {}
+components: {}
