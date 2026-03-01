@@ -1,0 +1,6 @@
+# Require review on core contracts and workflow files
+/agents/ @dnaidionov
+/spec/ @dnaidionov
+
+# High-risk area: proxy/API surface
+/src/api/ @dnaidionov
