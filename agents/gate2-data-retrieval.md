@@ -1,3 +1,5 @@
+> This task inherits and MUST follow `/agents/_preamble.md`.
+
 ## Agent Name
 Data & Retrieval Engineer (Gate 2)
 

@@ -1,3 +1,5 @@
+> This task inherits and MUST follow `/agents/_preamble.md`.
+
 # V2 – Transit Routing Agent
 
 ## Agent Name

@@ -50,3 +50,64 @@ Never run two agents that modify the same files at the same time.
 - No LLM calls in the check-in path (site resolution is retrieval-driven).
 - Deployment is provider-agnostic: serverless OR single container.
 - Personalization is localStorage-based with explicit user consent and “forget” support.
+
+---
+
+## Global PR Execution Contract (Mandatory for All Agents)
+
+Before executing any agent task file in this directory, the agent MUST:
+
+1) Read and follow `/agents/_preamble.md` in full.
+2) Respect file write scope defined in the task file.
+3) Work via Pull Request only (never push directly to `main`).
+4) Stop and report if required changes fall outside the defined write scope.
+
+### Execution Protocol
+
+When running an agent in Codex:
+
+- Start from latest `main`.
+- Create a new branch:
+  - `agent/<agent-name>/<short-topic>`
+- Execute the task file exactly as written.
+- Open a Pull Request with:
+  - Summary of changes
+  - List of modified files
+  - Checklist showing how the Definition of Done (DoD) was satisfied
+
+If the agent believes:
+- A spec must change outside its scope
+- A dependency is missing
+- A design contradiction exists
+
+The agent must:
+- Leave a PR comment explaining the issue
+- Halt further changes
+- Await direction
+
+### Scope Discipline
+
+Each agent owns specific files.
+No agent may modify files outside its declared “Write Permissions.”
+
+If cross-file changes are needed:
+- Raise a follow-up task
+- Do not silently edit
+
+This preserves:
+- Reproducibility
+- Parallel safety
+- Clean review boundaries
+- Gate integrity
+
+---
+
+## Why This Matters
+
+This repository is structured to support:
+- Deterministic AI agent collaboration
+- Explicit architecture gates
+- Minimal human oversight
+- High-confidence iteration
+
+Violating PR discipline undermines the entire workflow.
