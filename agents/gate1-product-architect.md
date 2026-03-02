@@ -28,6 +28,7 @@ Freeze the product architecture, capability scope, non-functional requirements, 
 - Hosting unknown: deployment must support serverless OR single container.
 - Peak load: must handle extreme burst traffic during OHNY weekend.
 - Check-in path must not depend on LLM calls (site resolution must be retrieval-driven).
+- Do not create atomic REQ files; leave atomization to the Requirements Catalog agent.
 
 ## Required Deliverables
 - /spec/product-architecture.md:

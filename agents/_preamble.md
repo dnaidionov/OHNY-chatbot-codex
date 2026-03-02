@@ -12,6 +12,7 @@
 
 4) Respect file write scope
 - Modify ONLY files listed under “Write Permissions” in the agent task file.
+- Reference REQ IDs when applicable, and do not create or edit `/spec/requirements/**` unless that path is explicitly included in write scope.
 - If you believe changes outside scope are necessary:
   - Do not make them.
   - Add a PR comment describing the needed change and why.

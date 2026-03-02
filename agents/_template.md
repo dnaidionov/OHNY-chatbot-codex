@@ -1,6 +1,7 @@
 # Agent Task Template
 
 > This task inherits and MUST follow `/agents/_preamble.md`.
+> Reference `REQ-...` IDs when applicable, and do not create or modify files under `/spec/requirements/**` unless they are included in Write Permissions.
 
 ## Agent Name
 <ROLE NAME>
