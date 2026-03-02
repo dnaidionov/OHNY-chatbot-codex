@@ -1,7 +1,7 @@
 > This task inherits and MUST follow `/agents/_preamble.md`.
 
 ## Agent Name
-Gate 1 Requirements Catalog Agent
+Requirements Catalog Agent (Gate 1)
 
 ## Phase
 Gate 1
