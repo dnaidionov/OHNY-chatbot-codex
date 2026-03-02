@@ -11,6 +11,7 @@ This repository uses a gate-based, contract-driven workflow. Merges to `main` ar
 - If behavior changes require spec changes, do it as:
   - PR A: spec change (review/merge)
   - PR B: implementation change (review/merge)
+- Atomic requirements belong in `/spec/requirements/` as individual `REQ-...` files and should be referenced by ID from higher-level specs rather than duplicated.
 
 3) **Gate integrity**
 - Gate 1 and Gate 2 freezes are real. After a gate is merged, downstream work must conform unless a deliberate gate revision PR is created.

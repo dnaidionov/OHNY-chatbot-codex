@@ -14,6 +14,14 @@ Artifacts:
 
 Gate 1 must be approved/merged before any Gate 2 work is accepted.
 
+### Gate 1.5 – Requirements Catalog
+Artifacts:
+- /spec/requirements/**
+- /spec/requirements/index.md
+- /agents/gate1-requirements-catalog.md
+
+This step runs after Gate 1 docs are available and atomizes approved requirements into individual REQ files.
+
 ### Gate 2 – Intelligence + Interface Freeze
 Artifacts:
 - /spec/data-model.md
@@ -43,6 +51,12 @@ Narrative:
 
 ## Parallelization Rule
 Never run two agents that modify the same files at the same time.
+
+## Requirements System
+- Atomic requirements live under `/spec/requirements/`.
+- Each requirement is defined in its own `REQ-<DOMAIN>-###.md` file and referenced by REQ-ID from higher-level specs.
+- The Requirements Catalog agent runs after Gate 1 is available and owns creation and maintenance of `/spec/requirements/**` unless another task explicitly grants that scope.
+- Other agents should reference REQ IDs when applicable and must not edit `/spec/requirements/**` unless their task file permits it.
 
 ## Architectural Principles
 - Travel is first-class; v1 is Tier 0 walking only.
